@@ -33,9 +33,9 @@ public final class FormularioActivity extends Pantalla {
         if (editando) {
             TextView modo = findViewById(R.id.txt_modo);
             TextView titulo = findViewById(R.id.txt_titulo);
-            modo.setText("REGISTRO #" + id);
-            titulo.setText("Editar trampa");
-            guardar.setText("Guardar cambios");
+            modo.setText(getString(R.string.registro_numero, id));
+            titulo.setText(getString(R.string.editar));
+            guardar.setText(getString(R.string.guardar_cambios));
             eliminar.setOnClickListener(vista -> eliminar());
         } else {
             eliminar.setVisibility(View.GONE);
@@ -64,7 +64,7 @@ public final class FormularioActivity extends Pantalla {
             captura.setText(Integer.toString(trampa.nivelCaptura));
             observaciones.setText(trampa.observaciones);
         } catch (SQLiteException error) {
-            avisar("No se pudo cargar la trampa.");
+            avisar(getString(R.string.error_cargar));
             finish();
         }
     }
@@ -73,11 +73,11 @@ public final class FormularioActivity extends Pantalla {
         String codigo = sector.getText().toString().trim();
         String tipoTrampa = tipo.getText().toString().trim();
         if (codigo.isEmpty()) {
-            marcarError(sector, "Ingresa el código de sector.");
+            marcarError(sector, getString(R.string.error_sector));
             return;
         }
         if (tipoTrampa.isEmpty()) {
-            marcarError(tipo, "Ingresa el tipo de trampa.");
+            marcarError(tipo, getString(R.string.error_tipo));
             return;
         }
 
@@ -85,11 +85,11 @@ public final class FormularioActivity extends Pantalla {
         try {
             nivel = Integer.parseInt(captura.getText().toString().trim());
         } catch (NumberFormatException error) {
-            marcarError(captura, "Ingresa un entero entre 0 y 2147483647.");
+            marcarError(captura, getString(R.string.error_nivel_entero));
             return;
         }
         if (nivel < 0) {
-            marcarError(captura, "El nivel de captura debe ser 0 o mayor.");
+            marcarError(captura, getString(R.string.error_nivel_negativo));
             return;
         }
 
@@ -98,29 +98,29 @@ public final class FormularioActivity extends Pantalla {
         try {
             if (id == NUEVA_TRAMPA) {
                 db.insertar(trampa);
-                avisar("Trampa registrada.");
+                avisar(getString(R.string.registrada));
             } else if (db.actualizar(trampa)) {
-                avisar("Cambios guardados.");
+                avisar(getString(R.string.cambios_guardados));
             } else {
                 volverPorRegistroAusente();
                 return;
             }
             finish();
         } catch (SQLiteException error) {
-            avisar("No se pudo guardar la trampa.");
+            avisar(getString(R.string.error_guardar));
         }
     }
 
     private void eliminar() {
         try {
             if (db.eliminar(id)) {
-                avisar("Trampa eliminada.");
+                avisar(getString(R.string.eliminada));
                 finish();
             } else {
                 volverPorRegistroAusente();
             }
         } catch (SQLiteException error) {
-            avisar("No se pudo eliminar la trampa.");
+            avisar(getString(R.string.error_eliminar));
         }
     }
 
@@ -130,7 +130,7 @@ public final class FormularioActivity extends Pantalla {
     }
 
     private void volverPorRegistroAusente() {
-        avisar("La trampa ya no está disponible.");
+        avisar(getString(R.string.registro_ausente));
         finish();
     }
 }

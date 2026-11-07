@@ -36,8 +36,8 @@ public final class MainActivity extends Pantalla {
                 Trampa trampa = getItem(posicion);
                 TextView titulo = fila.findViewById(android.R.id.text1);
                 TextView detalle = fila.findViewById(android.R.id.text2);
-                titulo.setText(trampa.codigoSector + " · " + trampa.tipoTrampa);
-                detalle.setText("#" + trampa.id + "  ·  Capturas: " + trampa.nivelCaptura);
+                titulo.setText(getString(R.string.fila_titulo, trampa.codigoSector, trampa.tipoTrampa));
+                detalle.setText(getString(R.string.fila_detalle, trampa.id, trampa.nivelCaptura));
                 return fila;
             }
         };
@@ -60,12 +60,12 @@ public final class MainActivity extends Pantalla {
             adaptador.addAll(trampas);
             adaptador.notifyDataSetChanged();
             int total = trampas.size();
-            resumen.setText(total == 1 ? "1 trampa registrada" : total + " trampas registradas");
-            vacio.setText("Aún no hay trampas registradas.\nUsa «Registrar trampa» para comenzar.");
+            resumen.setText(getResources().getQuantityString(R.plurals.total_trampas, total, total));
+            vacio.setText(getString(R.string.vacio));
         } catch (SQLiteException error) {
-            resumen.setText("Error de lectura");
-            vacio.setText("No se pudo cargar el listado. Vuelve a abrir la aplicación.");
-            avisar("No se pudo leer la base de datos.");
+            resumen.setText(getString(R.string.error_lectura));
+            vacio.setText(getString(R.string.error_listado));
+            avisar(getString(R.string.error_bd));
         }
     }
 }

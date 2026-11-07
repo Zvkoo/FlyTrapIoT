@@ -1,3 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">FlyTrapIoT</string>
+    <string name="app_name">FlyTrap IoT</string>
+    <string name="monitoreo">MONITOREO EN TERRENO</string>
+    <string name="registrar">Registrar trampa</string>
+    <string name="nuevo_registro">NUEVO REGISTRO</string>
+    <string name="campos_obligatorios">Completa los campos marcados con *.</string>
+    <string name="sector">Código de sector *</string>
+    <string name="ejemplo_sector">Ej. ARI-01</string>
+    <string name="tipo">Tipo de trampa *</string>
+    <string name="ejemplo_tipo">Ej. McPhail</string>
+    <string name="captura">Nivel de captura *</string>
+    <string name="ejemplo_captura">Ej. 12</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="ejemplo_observaciones">Ej. Revisada durante la mañana</string>
+    <string name="guardar">Guardar trampa</string>
+    <string name="eliminar">Eliminar trampa</string>
+    <string name="volver">Volver al listado</string>
+    <string name="vacio">Aún no hay trampas registradas.\nUsa «Registrar trampa» para comenzar.</string>
+    <string name="error_lectura">Error de lectura</string>
+    <string name="error_listado">No se pudo cargar el listado. Vuelve a abrir la aplicación.</string>
+    <string name="error_bd">No se pudo leer la base de datos.</string>
+    <string name="registro_numero">REGISTRO #%1$d</string>
+    <string name="editar">Editar trampa</string>
+    <string name="guardar_cambios">Guardar cambios</string>
+    <string name="error_cargar">No se pudo cargar la trampa.</string>
+    <string name="error_sector">Ingresa el código de sector.</string>
+    <string name="error_tipo">Ingresa el tipo de trampa.</string>
+    <string name="error_nivel_entero">Ingresa un entero entre 0 y 2147483647.</string>
+    <string name="error_nivel_negativo">El nivel de captura debe ser 0 o mayor.</string>
+    <string name="registrada">Trampa registrada.</string>
+    <string name="cambios_guardados">Cambios guardados.</string>
+    <string name="error_guardar">No se pudo guardar la trampa.</string>
+    <string name="eliminada">Trampa eliminada.</string>
+    <string name="error_eliminar">No se pudo eliminar la trampa.</string>
+    <string name="registro_ausente">La trampa ya no está disponible.</string>
+    <string name="fila_titulo">%1$s · %2$s</string>
+    <string name="fila_detalle">#%1$d · Capturas: %2$d</string>
+    <plurals name="total_trampas">
+        <item quantity="one">%d trampa registrada</item>
+        <item quantity="other">%d trampas registradas</item>
+    </plurals>
 </resources>
