@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">FlyTrap IoT</string>
+    <string name="app_name">FlyTrapIoT</string>
+    <string name="titulo_app">FlyTrap IoT</string>
     <string name="monitoreo">MONITOREO EN TERRENO</string>
     <string name="registrar">Registrar trampa</string>
     <string name="nuevo_registro">NUEVO REGISTRO</string>

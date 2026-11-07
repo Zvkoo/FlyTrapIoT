@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/main" android:background="#F3F7F3" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="20dp">
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/monitoreo" android:textSize="12sp" android:textColor="#176149" android:textStyle="bold" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/app_name" android:textSize="32sp" android:textColor="#143B30" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/titulo_app" android:textSize="32sp" android:textColor="#143B30" android:textStyle="bold" />
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="15sp" android:textColor="#435B52" android:id="@+id/txt_resumen" android:paddingBottom="10dp" />
     <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/boton_registrar" android:text="@string/registrar" android:textAllCaps="false" android:textColor="#FFFFFF" android:backgroundTint="#176149" android:minHeight="48dp" />
     <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
