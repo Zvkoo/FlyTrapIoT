@@ -7,13 +7,13 @@
     <string name="nuevo_registro">NUEVO REGISTRO</string>
     <string name="campos_obligatorios">Completa los campos marcados con *.</string>
     <string name="sector">Código de sector *</string>
-    <string name="ejemplo_sector">Ej. ARI-01</string>
+    <string name="ejemplo_sector">Ej. LLU-03</string>
     <string name="tipo">Tipo de trampa *</string>
-    <string name="ejemplo_tipo">Ej. McPhail</string>
+    <string name="ejemplo_tipo">Ej. Jackson</string>
     <string name="captura">Nivel de captura *</string>
-    <string name="ejemplo_captura">Ej. 12</string>
+    <string name="ejemplo_captura">Ej. 8</string>
     <string name="observaciones">Observaciones</string>
-    <string name="ejemplo_observaciones">Ej. Revisada durante la mañana</string>
+    <string name="ejemplo_observaciones">Ej. Trampa revisada después del riego</string>
     <string name="guardar">Guardar trampa</string>
     <string name="eliminar">Eliminar trampa</string>
     <string name="volver">Volver al listado</string>

@@ -1,11 +1,66 @@
-<?xml version='1.0' encoding='utf-8'?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/main" android:background="#F3F7F3" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="20dp">
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/monitoreo" android:textSize="12sp" android:textColor="#176149" android:textStyle="bold" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/titulo_app" android:textSize="32sp" android:textColor="#143B30" android:textStyle="bold" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="15sp" android:textColor="#435B52" android:id="@+id/txt_resumen" android:paddingBottom="10dp" />
-    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/boton_registrar" android:text="@string/registrar" android:textAllCaps="false" android:textColor="#FFFFFF" android:backgroundTint="#176149" android:minHeight="48dp" />
-    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
-        <ListView android:background="#F3F7F3" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/lista_trampas" android:dividerHeight="1dp" />
-        <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/txt_vacio" android:textSize="16sp" android:textColor="#435B52" android:gravity="center" />
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF5EC"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/monitoreo"
+        android:textColor="#765B40"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_app"
+        android:textColor="#3E3025"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_resumen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:textColor="#655447"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/boton_registrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DEC5A5"
+        android:minHeight="48dp"
+        android:text="@string/registrar"
+        android:textAllCaps="false"
+        android:textColor="#3E3025" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lista_trampas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FAF5EC"
+            android:dividerHeight="1dp" />
+
+        <TextView
+            android:id="@+id/txt_vacio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#655447"
+            android:textSize="16sp" />
+
     </FrameLayout>
+
 </LinearLayout>

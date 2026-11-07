@@ -1,19 +1,154 @@
-<?xml version='1.0' encoding='utf-8'?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/main" android:background="#F3F7F3" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/contenido_formulario" android:focusableInTouchMode="true" android:orientation="vertical" android:padding="20dp">
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/nuevo_registro" android:textSize="12sp" android:textColor="#176149" android:id="@+id/txt_modo" android:textStyle="bold" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/registrar" android:textSize="28sp" android:textColor="#143B30" android:id="@+id/txt_titulo" android:textStyle="bold" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/campos_obligatorios" android:textSize="15sp" android:textColor="#435B52" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sector" android:textSize="15sp" android:textColor="#143B30" android:labelFor="@id/campo_sector" android:textStyle="bold" android:paddingTop="12dp" />
-        <EditText android:backgroundTint="#176149" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/campo_sector" android:hint="@string/ejemplo_sector" android:inputType="text|textCapCharacters" android:textColor="#143B30" android:textColorHint="#435B52" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/tipo" android:textSize="15sp" android:textColor="#143B30" android:labelFor="@id/campo_tipo" android:textStyle="bold" android:paddingTop="12dp" />
-        <EditText android:backgroundTint="#176149" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/campo_tipo" android:hint="@string/ejemplo_tipo" android:inputType="text|textCapSentences" android:textColor="#143B30" android:textColorHint="#435B52" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/captura" android:textSize="15sp" android:textColor="#143B30" android:labelFor="@id/campo_captura" android:textStyle="bold" android:paddingTop="12dp" />
-        <EditText android:backgroundTint="#176149" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/campo_captura" android:hint="@string/ejemplo_captura" android:inputType="number" android:textColor="#143B30" android:textColorHint="#435B52" />
-        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/observaciones" android:textSize="15sp" android:textColor="#143B30" android:labelFor="@id/campo_observaciones" android:textStyle="bold" android:paddingTop="12dp" />
-        <EditText android:backgroundTint="#176149" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/campo_observaciones" android:hint="@string/ejemplo_observaciones" android:inputType="text|textCapSentences|textMultiLine" android:textColor="#143B30" android:textColorHint="#435B52" android:minLines="2" />
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/boton_guardar" android:text="@string/guardar" android:textAllCaps="false" android:textColor="#FFFFFF" android:backgroundTint="#176149" android:minHeight="48dp" />
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/boton_eliminar" android:text="@string/eliminar" android:textAllCaps="false" android:textColor="#FFFFFF" android:backgroundTint="#A02F37" android:minHeight="48dp" />
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/boton_volver" android:text="@string/volver" android:textAllCaps="false" android:textColor="#FFFFFF" android:backgroundTint="#435B52" android:minHeight="48dp" />
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF5EC">
+
+    <LinearLayout
+        android:id="@+id/contenido_formulario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/txt_modo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nuevo_registro"
+            android:textColor="#765B40"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registrar"
+            android:textColor="#3E3025"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/campos_obligatorios"
+            android:textColor="#655447"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/campo_sector"
+            android:paddingTop="12dp"
+            android:text="@string/sector"
+            android:textColor="#3E3025"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/campo_sector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DEC5A5"
+            android:hint="@string/ejemplo_sector"
+            android:inputType="text|textCapCharacters"
+            android:textColor="#3E3025"
+            android:textColorHint="#655447" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/campo_tipo"
+            android:paddingTop="12dp"
+            android:text="@string/tipo"
+            android:textColor="#3E3025"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/campo_tipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DEC5A5"
+            android:hint="@string/ejemplo_tipo"
+            android:inputType="text|textCapSentences"
+            android:textColor="#3E3025"
+            android:textColorHint="#655447" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/campo_captura"
+            android:paddingTop="12dp"
+            android:text="@string/captura"
+            android:textColor="#3E3025"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/campo_captura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DEC5A5"
+            android:hint="@string/ejemplo_captura"
+            android:inputType="number"
+            android:textColor="#3E3025"
+            android:textColorHint="#655447" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/campo_observaciones"
+            android:paddingTop="12dp"
+            android:text="@string/observaciones"
+            android:textColor="#3E3025"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/campo_observaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DEC5A5"
+            android:hint="@string/ejemplo_observaciones"
+            android:inputType="text|textCapSentences|textMultiLine"
+            android:minLines="2"
+            android:textColor="#3E3025"
+            android:textColorHint="#655447" />
+
+        <Button
+            android:id="@+id/boton_guardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DEC5A5"
+            android:minHeight="48dp"
+            android:text="@string/guardar"
+            android:textAllCaps="false"
+            android:textColor="#3E3025" />
+
+        <Button
+            android:id="@+id/boton_eliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A02F37"
+            android:minHeight="48dp"
+            android:text="@string/eliminar"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/boton_volver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#765B40"
+            android:minHeight="48dp"
+            android:text="@string/volver"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
     </LinearLayout>
+
 </ScrollView>

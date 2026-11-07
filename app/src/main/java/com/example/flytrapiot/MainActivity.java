@@ -36,8 +36,8 @@ public final class MainActivity extends Pantalla {
                 Trampa trampa = getItem(posicion);
                 TextView titulo = fila.findViewById(android.R.id.text1);
                 TextView detalle = fila.findViewById(android.R.id.text2);
-                titulo.setTextColor(0xFF143B30);
-                detalle.setTextColor(0xFF435B52);
+                titulo.setTextColor(0xFF3E3025);
+                detalle.setTextColor(0xFF655447);
                 titulo.setText(getString(R.string.fila_titulo, trampa.codigoSector, trampa.tipoTrampa));
                 detalle.setText(getString(R.string.fila_detalle, trampa.id, trampa.nivelCaptura));
                 return fila;
